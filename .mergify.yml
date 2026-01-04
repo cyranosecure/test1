@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: merge when CI passes
+    conditions:
+      - base=main
+      - "#approved-reviews-by>=1"
+      - -conflict
+    actions:
+      merge:
+        method: squash
